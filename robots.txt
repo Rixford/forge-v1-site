@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rixford.github.io/forge-v1-site/sitemap.xml
