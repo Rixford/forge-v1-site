@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORGE Support</title>
-  <meta name="description" content="Support for FORGE, including subscription management, restore purchases, generation troubleshooting, and privacy links.">
+  <title>FORGE Workout Builder Support</title>
+  <meta name="description" content="Support for the FORGE iPhone workout builder, including workout generation, subscriptions, top-ups, restore purchase, and privacy questions.">
+  <meta name="robots" content="index, follow">
   <meta property="og:title" content="FORGE Support">
   <meta property="og:description" content="Get help with subscriptions, purchases, and workout generation in FORGE.">
   <meta property="og:type" content="website">
@@ -13,33 +14,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="index.html">
-        <div class="brand-mark">🔥</div>
-        <div class="brand-copy">
-          <div class="brand-name">FORGE</div>
-          <div class="brand-tag">Support</div>
-        </div>
+      <a class="brand" href="index.html" aria-label="FORGE home">
+        <img class="brand-symbol" src="assets/brand/forge-strike-bone.svg" alt="">
+        <span class="brand-copy">
+          <img class="brand-wordmark" src="assets/brand/forge-wordmark-bone.svg" alt="">
+          <span class="brand-tag">Workout Builder</span>
+        </span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
+        <a href="support.html" aria-current="page">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
       </nav>
     </header>
 
-    <main class="page-panel">
+    <main class="page-panel" id="main-content" tabindex="-1">
       <h1 class="page-title">Support</h1>
       <div class="page-updated">FORGE for iPhone</div>
 
       <section class="section">
         <h2>What FORGE does</h2>
         <p>
-          FORGE builds structured workouts around your goal, training style,
-          body focus, duration, equipment, quick limits, and optional freeform
-          constraints. Sessions are organized into warmup, main block, optional
-          finisher, and cooldown, with copyable overview and detailed workout output.
+          FORGE builds a workout from your goal, training style, body focus,
+          duration, equipment, session use, and limits. A workout can include
+          warmup, main work, an optional finisher, cooldown, rest, cues, and
+          movement detail.
         </p>
       </section>
 
@@ -52,33 +56,55 @@
 
       <section class="section">
         <h2>Subscription management</h2>
-        <ul>
-          <li>Open FORGE and tap the flame button in the upper-left corner of the workout builder.</li>
-          <li>Tap <code>Manage Subscription</code> to open Apple's subscription management sheet.</li>
-          <li>You can also manage or cancel from the App Store account subscription settings.</li>
-        </ul>
+        <ol>
+          <li>Open FORGE and choose <code>Account</code> in the upper-left corner of the workout builder.</li>
+          <li>Choose <code>Manage subscription</code> to open Apple's subscription settings.</li>
+          <li>You can also manage or cancel from App Store account settings.</li>
+        </ol>
         <p>
-          FORGE includes 3 total free workout generations before subscription.
-          After those free generations are used, active subscribers receive the monthly generation allowance.
+          FORGE includes 3 total free workout generations before subscription. An active
+          monthly subscription provides 50 workout generations per billing period.
         </p>
       </section>
 
       <section class="section">
-        <h2>Restore purchases</h2>
+        <h2>Restore purchase</h2>
         <p>
-          If your subscription or top-up access does not appear, open the account screen from
-          the flame button and tap <code>Restore</code>. FORGE uses native StoreKit purchase restoration.
+          Open <code>Account</code> and choose <code>Restore purchases</code> to restore an active
+          monthly subscription purchased with this Apple ID.
+        </p>
+        <p>
+          Consumable top-ups cannot be restored from App Store purchase history. If a
+          completed top-up is missing, contact support with the top-up size and approximate
+          purchase time. Do not send your Apple ID or receipt data.
         </p>
       </section>
 
       <section class="section">
-        <h2>Troubleshooting workout generation</h2>
-        <ul>
-          <li>Confirm your iPhone has a working internet connection.</li>
-          <li>Make sure your subscription is active, or that free/top-up generations remain.</li>
-          <li>If a purchase completed but access did not refresh, use <code>Restore</code> first.</li>
-          <li>If workout generation still fails, contact support with a short description of the issue and what screen you were on.</li>
-        </ul>
+        <h2>Interrupted build</h2>
+        <p>
+          If a workout build was interrupted, reopen FORGE. The app keeps the pending build
+          and resumes it when possible. You can also choose <code>Resume build</code> from the builder.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Build troubleshooting</h2>
+        <ol>
+          <li>Confirm the iPhone has a working internet connection.</li>
+          <li>Check the generation balance in <code>Account</code>.</li>
+          <li>If an active subscription is missing, choose <code>Restore purchases</code>.</li>
+          <li>If the build still fails, contact support with the approximate time, selected duration, and the screen where the failure appeared.</li>
+        </ol>
+        <p>Do not send sensitive medical information, an Apple ID, receipt data, or a session token.</p>
+      </section>
+
+      <section class="section">
+        <h2>Product boundary</h2>
+        <p>
+          FORGE builds workouts from the choices you enter. It is not a medical service and
+          does not replace licensed medical advice or in-person coaching judgment.
+        </p>
       </section>
 
       <section class="section">
@@ -91,12 +117,15 @@
     </main>
 
     <footer class="footer">
-      <div>FORGE</div>
-      <div class="legal-links">
+      <div class="footer-brand">
+        <img src="assets/brand/forge-strike-bone.svg" alt="" aria-hidden="true">
+        <div><strong>FORGE: Workout Builder</strong><span>Train with what you've got.</span></div>
+      </div>
+      <nav class="legal-links" aria-label="Legal and support">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-      </div>
+      </nav>
     </footer>
   </div>
 </body>

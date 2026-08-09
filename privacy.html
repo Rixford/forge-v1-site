@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORGE V1 Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for FORGE V1. Learn what data the app stores locally, what is sent to the backend for workout generation, and how subscriptions and hosting logs are handled.">
-  <meta property="og:title" content="FORGE V1 Privacy Policy">
-  <meta property="og:description" content="Privacy details for FORGE V1, including local workout history, backend generation inputs, and StoreKit purchase handling.">
+  <title>FORGE Workout Builder Privacy Policy</title>
+  <meta name="description" content="Privacy details for the FORGE iPhone workout builder, including on-device history, workout generation data, backend processing, integrity checks, and StoreKit purchases.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="FORGE Privacy Policy">
+  <meta property="og:description" content="Privacy details for FORGE, including local workout history, backend generation inputs, and StoreKit purchase handling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rixford.github.io/forge-v1-site/privacy.html">
   <link rel="canonical" href="https://rixford.github.io/forge-v1-site/privacy.html">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="index.html">
-        <div class="brand-mark">🔥</div>
-        <div class="brand-copy">
-          <div class="brand-name">FORGE V1</div>
-          <div class="brand-tag">Privacy policy</div>
-        </div>
+      <a class="brand" href="index.html" aria-label="FORGE home">
+        <img class="brand-symbol" src="assets/brand/forge-strike-bone.svg" alt="">
+        <span class="brand-copy">
+          <img class="brand-wordmark" src="assets/brand/forge-wordmark-bone.svg" alt="">
+          <span class="brand-tag">Workout Builder</span>
+        </span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
         <a href="terms.html">Terms</a>
       </nav>
     </header>
 
-    <main class="page-panel">
+    <main class="page-panel" id="main-content" tabindex="-1">
       <h1 class="page-title">Privacy Policy</h1>
-      <div class="page-updated">Effective May 15, 2026</div>
+      <div class="page-updated">Effective August 8, 2026</div>
 
       <section class="section">
         <h2>Overview</h2>
         <p>
-          FORGE V1 is an iPhone app that builds structured workouts around
+          FORGE is an iPhone app that builds structured workouts around
           the user's goal, training style, body focus, duration, equipment,
           quick limits, and optional freeform constraints.
         </p>
@@ -49,25 +53,26 @@
       <section class="section">
         <h2>What FORGE stores on your device</h2>
         <ul>
-          <li>Recent workout history saved locally on your device.</li>
-          <li>Onboarding preferences such as name, goal, experience level, and training days per week.</li>
-          <li>A stable app account token and short-lived session token stored in the iOS Keychain for subscription-backed access.</li>
+          <li>Workout history and a pending workout build.</li>
+          <li>Profile details such as name, goal, training experience, and training days per week.</li>
+          <li>A summary of recent workout choices and feedback used to provide context for later workout requests.</li>
+          <li>A stable app account token, request-signing key, App Attest key reference, and short-lived session token stored in the iOS Keychain for access control and fraud prevention.</li>
         </ul>
       </section>
 
       <section class="section">
         <h2>What FORGE sends to the backend</h2>
-        <p>FORGE may send workout generation inputs to the backend only to create the workout you asked for.</p>
+        <p>FORGE sends workout-request data to the backend to build the workout you asked for. A request can include:</p>
         <ul>
-          <li>Selected goal and workout role</li>
-          <li>Selected training style and body focus</li>
-          <li>Selected duration and available equipment</li>
-          <li>Selected quick limits such as low impact, knee friendly, no jumping, no running, shoulder friendly, or quiet</li>
-          <li>Optional freeform constraints typed by the user</li>
-          <li>Subscription validation information required to verify access</li>
+          <li>Your name, goal, training experience, and training days per week.</li>
+          <li>Selected training styles, body focus, duration, equipment, session use, and quick limits.</li>
+          <li>Optional details typed in the workout builder.</li>
+          <li>A summary of recent workout choices, generated difficulty, and workout feedback.</li>
+          <li>Subscription validation information required to verify access.</li>
+          <li>A device-scoped app account identifier, request-signing public key, and Apple App Attest or DeviceCheck data used for access control and fraud prevention.</li>
         </ul>
         <div class="note">
-          Do not type sensitive medical information into the freeform constraints field.
+          Do not type sensitive medical information into the optional details field.
           Use it for training preferences, movement limits, class context, or equipment notes.
         </div>
       </section>
@@ -75,13 +80,14 @@
       <section class="section">
         <h2>How backend services are used</h2>
         <p>
-          FORGE may use server-side generation services to create workouts. The app
-          does not include the generation provider API key inside the iOS build.
+          The FORGE backend sends workout-request content to OpenAI to generate the requested workout.
         </p>
         <p>
-          Backend systems may store subscription state, workout-generation allowances,
-          transaction records, and related operational data required to validate purchases,
-          enforce generation limits, and fulfill your request.
+          The backend stores the workout request and generated response as a generation job.
+          This lets FORGE resume an interrupted request without charging another generation.
+          Backend systems also store subscription state, generation allowances, transaction
+          records, app-integrity records, and related operational data needed to validate
+          purchases, prevent repeated free grants, enforce limits, and fulfill requests.
         </p>
         <p>
           The backend is hosted behind Cloudflare. Cloudflare may automatically log
@@ -98,7 +104,7 @@
         <p>
           Purchases and subscriptions are processed by Apple through StoreKit.
           FORGE receives transaction information needed to verify subscription
-          access, trial eligibility, top-up purchases, and generation allowances.
+          access, free-generation eligibility, top-up purchases, and generation allowances.
         </p>
       </section>
 
@@ -117,18 +123,21 @@
         <h2>Contact</h2>
         <p>
           If you have questions about this Privacy Policy or privacy practices
-          for FORGE V1, contact <a href="mailto:breatheintent@yahoo.com">breatheintent@yahoo.com</a>.
+          for FORGE, contact <a href="mailto:breatheintent@yahoo.com">breatheintent@yahoo.com</a>.
         </p>
       </section>
     </main>
 
     <footer class="footer">
-      <div>FORGE V1</div>
-      <div class="legal-links">
+      <div class="footer-brand">
+        <img src="assets/brand/forge-strike-bone.svg" alt="" aria-hidden="true">
+        <div><strong>FORGE: Workout Builder</strong><span>Train with what you've got.</span></div>
+      </div>
+      <nav class="legal-links" aria-label="Legal and support">
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
         <a href="terms.html">Terms</a>
-      </div>
+      </nav>
     </footer>
   </div>
 </body>

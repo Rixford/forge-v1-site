@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 768 220">
+  <title id="title">FORGE wordmark, Bone</title>
+  <desc id="desc">Compact uppercase FORGE wordmark drawn as deterministic vector geometry.</desc>
+  <defs>
+    <mask id="forge-wordmark-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="768" height="220">
+  <path fill="#fff" d="M20 20H132V52H56V93H122V124H56V200H20Z"/>
+<path fill="#fff" d="M183 20H241C262 20 276 34 276 55V165C276 186 262 200 241 200H183C162 200 148 186 148 165V55C148 34 162 20 183 20Z"/>
+<path fill="#000" d="M190 52H234C239 52 242 55 242 60V160C242 165 239 168 234 168H190C185 168 182 165 182 160V60C182 55 185 52 190 52Z"/>
+<path fill="#fff" d="M304 20H391C415 20 430 35 430 59V91C430 110 421 123 405 128L451 200H409L369 132H340V200H304Z"/>
+<path fill="#000" d="M340 52H384C392 52 396 56 396 64V88C396 96 392 100 384 100H340Z"/>
+<path fill="#fff" d="M504 20H566C587 20 601 34 601 55V72H567V60C567 55 564 52 559 52H511C506 52 503 55 503 60V160C503 165 506 168 511 168H559C564 168 567 165 567 160V136H536V105H601V165C601 186 587 200 566 200H504C483 200 469 186 469 165V55C469 34 483 20 504 20Z"/>
+<path fill="#fff" d="M630 20H748V52H666V93H738V124H666V168H748V200H630Z"/>
+</mask>
+  </defs>
+  <rect width="768" height="220" fill="#F0EBE2" mask="url(#forge-wordmark-cut)"/>
+</svg>

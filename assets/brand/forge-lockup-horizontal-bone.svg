@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1130 300">
+  <title id="title">FORGE horizontal lockup, Bone</title>
+  <desc id="desc">FORGE horizontal lockup with the STRIKE mark and compact uppercase wordmark.</desc>
+  <defs>
+    <mask id="strike-horizontal-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+  <g transform="translate(0 10.0)">
+    <path fill="#fff" d="M326 104
+C270 112 235 147 224 198
+C214 246 226 290 262 331
+L296 356
+C265 368 239 385 216 405
+C163 452 128 506 117 575
+C99 684 139 783 230 840
+C281 872 345 887 408 890
+L616 890
+C679 887 743 872 794 840
+C885 783 925 684 907 575
+C896 506 861 452 808 405
+C785 385 759 368 728 356
+L762 331
+C798 290 810 246 800 198
+C789 147 754 112 698 104
+C575 89 449 89 326 104
+Z"/>
+    <path fill="#000" d="M337 183
+C390 165 634 165 687 183
+C709 191 720 208 718 229
+C716 247 708 262 693 275
+C585 260 439 260 331 275
+C316 262 308 247 306 229
+C304 208 315 191 337 183
+Z"/>
+    <g transform="rotate(-28.0 512 560)" fill="#000">
+      <rect x="310" y="523" width="342" height="74" rx="30"/>
+      <rect x="606" y="430" width="96" height="226" rx="10"/>
+    </g>
+  </g>
+</mask>
+    <mask id="wordmark-horizontal-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="768" height="220">
+  <path fill="#fff" d="M20 20H132V52H56V93H122V124H56V200H20Z"/>
+<path fill="#fff" d="M183 20H241C262 20 276 34 276 55V165C276 186 262 200 241 200H183C162 200 148 186 148 165V55C148 34 162 20 183 20Z"/>
+<path fill="#000" d="M190 52H234C239 52 242 55 242 60V160C242 165 239 168 234 168H190C185 168 182 165 182 160V60C182 55 185 52 190 52Z"/>
+<path fill="#fff" d="M304 20H391C415 20 430 35 430 59V91C430 110 421 123 405 128L451 200H409L369 132H340V200H304Z"/>
+<path fill="#000" d="M340 52H384C392 52 396 56 396 64V88C396 96 392 100 384 100H340Z"/>
+<path fill="#fff" d="M504 20H566C587 20 601 34 601 55V72H567V60C567 55 564 52 559 52H511C506 52 503 55 503 60V160C503 165 506 168 511 168H559C564 168 567 165 567 160V136H536V105H601V165C601 186 587 200 566 200H504C483 200 469 186 469 165V55C469 34 483 20 504 20Z"/>
+<path fill="#fff" d="M630 20H748V52H666V93H738V124H666V168H748V200H630Z"/>
+</mask>
+  </defs>
+  <g transform="translate(0 20) scale(0.254)">
+    <rect width="1024" height="1024" fill="#F0EBE2" mask="url(#strike-horizontal-cut)"/>
+  </g>
+  <g transform="translate(330 40)">
+    <rect width="768" height="220" fill="#F0EBE2" mask="url(#wordmark-horizontal-cut)"/>
+  </g>
+</svg>
